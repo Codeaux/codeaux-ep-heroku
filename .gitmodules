@@ -1,0 +1,3 @@
+[submodule "codeaux-etherpad"]
+	path = codeaux-etherpad
+	url = http://github.com/Codeaux/codeaux-ep.git
