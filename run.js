@@ -1,9 +1,18 @@
 'use strict';
 
+// Load environment variables.
+require('dotenv').load();
+
 var shell = require('shelljs');
+var settings = require('./settings');
 
-shell.cp('settings.json', './codeaux-etherpad/settings.json');
+// Generate settings.json file.
+shell.echo(JSON.stringify(settings)).to('settings.json');
 
+// Copy settings.json file to root directory of etherpad.
+shell.mv('-f', 'settings.json', './codeaux-etherpad/');
+
+// Execute etherpad server.
 if (shell.exec('bash ./codeaux-etherpad/bin/run.sh').code !== 0) {
   shell.echo('Error: codeaux-etherpad not found');
   shell.exit(1);
