@@ -25,7 +25,7 @@ var initSettings = function() {
     // Production stage Database settings. (Comment out accordingly)
     "dbSettings": {
       "host": process.env.MONGOLAB_HOST,
-      "port": process.env.MONGOLAB_PORT,
+      "port": parseInt(process.env.MONGOLAB_PORT),
       "dbname": process.env.MONGOLAB_DBNAME,
       "user": process.env.MONGOLAB_USERNAME,
       "password": process.env.MONGOLAB_PASSWORD
