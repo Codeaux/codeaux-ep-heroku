@@ -1,7 +1,7 @@
 'use strict';
 
 // Load local environment variables (Uncomment this when doing development locally).
-require('dotenv').load();
+//require('dotenv').load();
 
 var shell = require('shelljs');
 var settings = require('./settings');
