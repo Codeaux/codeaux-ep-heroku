@@ -10,7 +10,7 @@ var initSettings = function() {
 
     // IP and port which etherpad should bind to.
     //"ip": "0.0.0.0",
-    //"port": 9001,
+    "port": parseInt(process.env.PORT),
 
     // The Type of the database etherpad utilizes. Alternative options: `postgres`, `sqlite` or `mysql`.
     "dbType": process.env.DBTYPE,
